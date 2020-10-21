@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="418dp"
+        android:layout_height="592dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="52dp"
+        android:paddingTop="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/btEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txTitulo"
+                android:layout_width="298dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/audiowide"
+                android:gravity="center"
+                android:text="TITULO"
+                android:textSize="100px" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="137dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/audiowide"
+                android:text="Ingredientes"
+                android:textSize="50px" />
+
+            <TextView
+                android:id="@+id/txIngredientes"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="ingredientes" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:fontFamily="@font/audiowide"
+                android:text="Modo de Preparação"
+                android:textSize="50px" />
+
+            <TextView
+                android:id="@+id/txPreparacao"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:text="preparacao" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btEdit"
+        android:layout_width="161dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/costume_button_rounded_corners"
+        android:text="Editar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btCancel" />
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="161dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/costume_button_rounded_corners"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btEdit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

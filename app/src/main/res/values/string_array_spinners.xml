@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="categorias">
+        <item>Entradas</item>
+        <item>Sopas</item>
+        <item>Pratos Principais</item>
+        <item>Sobremesas</item>
+        <item>Molhos</item>
+        <item>Cremes</item>
+    </string-array>
+    <string-array name="subCategoria">
+        <item>Carnes</item>
+        <item>Peixes</item>
+        <item>Saladas</item>
+    </string-array>
+</resources>
