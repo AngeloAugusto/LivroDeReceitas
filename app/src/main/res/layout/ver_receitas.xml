@@ -9,7 +9,7 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="418dp"
+        android:layout_width="wrap_content"
         android:layout_height="592dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="16dp"
@@ -88,7 +88,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/costume_button_rounded_corners"
-        android:text="Cancelar"
+        android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btEdit"
         app:layout_constraintStart_toStartOf="parent" />

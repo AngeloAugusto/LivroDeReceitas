@@ -102,8 +102,6 @@ public class criarReceita extends AppCompatActivity {
         });
     }
 
-
-
     private void createReceita(){
         final String nomeReceita = nReceita.getText().toString().trim();
         final String ingredi = ingredientes.getText().toString().trim();
@@ -120,7 +118,7 @@ public class criarReceita extends AppCompatActivity {
         progressDialog.setMessage("A criar receita...");
         progressDialog.show();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, constants.URL_REGISTER, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, constants.URL_CREATE, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 progressDialog.dismiss();
@@ -133,7 +131,8 @@ public class criarReceita extends AppCompatActivity {
 
                     clearAll();
 
-                    //TODO: uando criar ir para a página de de ver receitas
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    finish();
 
                 } catch (JSONException e) {
                     e.printStackTrace();

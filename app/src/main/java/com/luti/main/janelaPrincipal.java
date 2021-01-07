@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class janelaPrincipal extends AppCompatActivity {
 
-    private Button btCancel, btEntradas;
+    private Button btCancel, btEntradas, btSopas, btPratoInicial, btCremes, btSobremesas, btMolhos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,11 @@ public class janelaPrincipal extends AppCompatActivity {
 
         btCancel = findViewById(R.id.btCancel);
         btEntradas = findViewById(R.id.btEntradas);
+        btSopas = findViewById(R.id.btSopas);
+        btPratoInicial = findViewById(R.id.btPratoInicial);
+        btCremes = findViewById(R.id.btCremes);
+        btSobremesas = findViewById(R.id.btSobremesas);
+        btMolhos = findViewById(R.id.btMolhos);
 
 
         btCancel.setOnClickListener(new View.OnClickListener() {
@@ -30,20 +35,56 @@ public class janelaPrincipal extends AppCompatActivity {
         btEntradas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),titulosReceitas.class));
+                Intent intent = new Intent(janelaPrincipal.this,titulosReceitas.class);
+                intent.putExtra("categoria", 2);
+                startActivity(intent);
                 finish();
-                //btEntradasClick();
             }
         });
-    }
-
-    private void btEntradasClick(){
-
-        Intent intent = new Intent(janelaPrincipal.this,verReceitas.class);
-        intent.putExtra("titulo", "Arroz");
-        intent.putExtra("ingredientes", "Arroz");
-        intent.putExtra("preparacao", "Arroz");
-        startActivity(intent);
-        finish();
+        btSopas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(janelaPrincipal.this,titulosReceitas.class);
+                intent.putExtra("categoria", 3);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btPratoInicial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(janelaPrincipal.this,titulosReceitas.class);
+                intent.putExtra("categoria", 4);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btSobremesas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(janelaPrincipal.this,titulosReceitas.class);
+                intent.putExtra("categoria", 5);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btMolhos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(janelaPrincipal.this,titulosReceitas.class);
+                intent.putExtra("categoria", 6);
+                startActivity(intent);
+                finish();
+            }
+        });
+        btCremes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(janelaPrincipal.this,titulosReceitas.class);
+                intent.putExtra("categoria", 7);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Livro de Receitas</string>
+    <string name="sub_categoria">Sub-Categoria</string>
+    <string name="receita">Receita</string>
+    <string name="nome_da_receita">Nome da Receita</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="modo_de_prepara_o">Modo de Preparação</string>
+    <string name="categoria">Categoria</string>
+    <string name="prepara_o">Preparação</string>
+    <string name="criar">Criar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
