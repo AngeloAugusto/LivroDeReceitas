@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1048147946030",
+    "project_id": "livro-de-receitas-e46ee",
+    "storage_bucket": "livro-de-receitas-e46ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048147946030:android:ffde3654f6872b008e8dbf",
+        "android_client_info": {
+          "package_name": "com.luti.main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048147946030-gtulc7f35krm96uucet9dnkb9es0mjdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfGgTa_7zudLm_D0awodmTik7Bj0iiA7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048147946030-gtulc7f35krm96uucet9dnkb9es0mjdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
