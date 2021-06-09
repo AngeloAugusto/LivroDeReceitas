@@ -32,7 +32,7 @@ import java.util.Map;
 public class criarReceita extends AppCompatActivity {
     private EditText nReceita, ingredientes, preparacao;
     private Spinner categoria, sub_categoria;
-    private Button btCreate, btCancel;
+    private Button btCreate;
     private ProgressDialog progressDialog;
     private TextView tvSubCate;
 
@@ -49,7 +49,7 @@ public class criarReceita extends AppCompatActivity {
         sub_categoria =  findViewById(R.id.cbSubCategoria);
 
         btCreate = findViewById(R.id.btEdit);
-        btCancel =  findViewById(R.id.btCancel);
+//        btCancel =  findViewById(R.id.btCancel);
 
         tvSubCate = findViewById(R.id.tvSubCat);
 
@@ -66,13 +66,13 @@ public class criarReceita extends AppCompatActivity {
 
             }
         });
-        btCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                finish();
-            }
-        });
+//        btCancel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//                finish();
+//            }
+//        });
 
         sub_categoria.setVisibility(View.INVISIBLE);
         tvSubCate.setVisibility(View.INVISIBLE);
@@ -82,7 +82,7 @@ public class criarReceita extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 int selectedItem= categoria.getSelectedItemPosition() + 2;
-                System.out.println(selectedItem);
+//                System.out.println(selectedItem);
                 if(selectedItem==4){
                     sub_categoria.setVisibility(View.VISIBLE);
                     tvSubCate.setVisibility(View.VISIBLE);
@@ -102,6 +102,12 @@ public class criarReceita extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        finish();
+    }
+
     private void createReceita(){
         final String nomeReceita = nReceita.getText().toString().trim();
         final String ingredi = ingredientes.getText().toString().trim();
@@ -113,7 +119,7 @@ public class criarReceita extends AppCompatActivity {
             id_sub_cat= String.valueOf(sub_categoria.getSelectedItemPosition() + 2);
         }
 
-        final String id_sub_categoria= id_sub_cat;
+        final String id_sub_categoria=id_sub_cat;
 
         progressDialog.setMessage("A criar receita...");
         progressDialog.show();

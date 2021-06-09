@@ -9,14 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class janelaPrincipal extends AppCompatActivity {
 
-    private Button btCancel, btEntradas, btSopas, btPratoInicial, btCremes, btSobremesas, btMolhos;
+    private Button  btEntradas, btSopas, btPratoInicial, btCremes, btSobremesas, btMolhos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.janela_principal);
 
-        btCancel = findViewById(R.id.btCancel);
+//        btCancel = findViewById(R.id.btCancel);
         btEntradas = findViewById(R.id.btEntradas);
         btSopas = findViewById(R.id.btSopas);
         btPratoInicial = findViewById(R.id.btPratoInicial);
@@ -25,13 +25,13 @@ public class janelaPrincipal extends AppCompatActivity {
         btMolhos = findViewById(R.id.btMolhos);
 
 
-        btCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                finish();
-            }
-        });
+//        btCancel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+//                finish();
+//            }
+//        });
         btEntradas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,5 +86,10 @@ public class janelaPrincipal extends AppCompatActivity {
                 finish();
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+        finish();
     }
 }

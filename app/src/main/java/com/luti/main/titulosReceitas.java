@@ -59,14 +59,14 @@ public class titulosReceitas extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
 
         ll = findViewById(R.id.LinearLayout);
-        btVoltar = findViewById(R.id.btVoltar);
-        btVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),janelaPrincipal.class));
-                finish();
-            }
-        });
+//        btVoltar = findViewById(R.id.btVoltar);
+//        btVoltar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(getApplicationContext(),janelaPrincipal.class));
+//                finish();
+//            }
+//        });
 
         getTitles();
 
@@ -90,6 +90,7 @@ public class titulosReceitas extends AppCompatActivity {
                     intent.putExtra("ingredientes", arrayIngredi.get(clickedButton.getId()));
                     intent.putExtra("preparacao", arrayModPrep.get(clickedButton.getId()));
                     intent.putExtra("id", arrayId.get(clickedButton.getId()));
+                    intent.putExtra("id_categoria", id_categoria);
                     startActivity(intent);
                     finish();
                 }
@@ -97,6 +98,11 @@ public class titulosReceitas extends AppCompatActivity {
             buttons.add(button);
             ll.addView(button);
         }
+    }
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(),janelaPrincipal.class));
+        finish();
     }
 
     private void getTitles(){

@@ -146,18 +146,18 @@
 
                 <Button
                     android:id="@+id/btEdit"
-                    android:layout_width="100dp"
+                    android:layout_width="250dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/costume_button_rounded_corners"
                     android:text="@string/criar" />
 
-                <Button
-                    android:id="@+id/btCancel"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
-                    android:background="@drawable/costume_button_rounded_corners"
-                    android:text="@string/cancelar" />
+<!--                <Button-->
+<!--                    android:id="@+id/btCancel"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginLeft="30dp"-->
+<!--                    android:background="@drawable/costume_button_rounded_corners"-->
+<!--                    android:text="@string/cancelar" />-->
             </TableRow>
         </LinearLayout>
     </ScrollView>

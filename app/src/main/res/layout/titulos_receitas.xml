@@ -16,7 +16,6 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="15dp"
         android:paddingTop="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/btVoltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,16 +30,16 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/btVoltar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="30dp"
-        android:text="Voltar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/costume_button_rounded_corners"/>
+<!--    <Button-->
+<!--        android:id="@+id/btVoltar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:text="Voltar"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:background="@drawable/costume_button_rounded_corners"/>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
